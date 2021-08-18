@@ -21,10 +21,10 @@ print(processedText)
 # Passing the text and language to the engine,
 # lang='en' to set language to English,
 # slow=False to converted text to a high speed audio
-myobj = gTTS(text=processedText, lang='en', slow=False)
+audioObj = gTTS(text=processedText, lang='en', slow=False)
   
 # Save the converted audio in a mp3 file
-myobj.save("output.mp3")
+audioObj.save("output.mp3")
   
 # Play the converted file
 playsound("output.mp3")
