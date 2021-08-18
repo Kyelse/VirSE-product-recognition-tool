@@ -27,7 +27,6 @@ def process_text(unprocessedText):
     return processedText
 
 def textToSpeech(text):
-
     
     # Passing the text and language to the engine,
     # lang='en' to set language to English,
