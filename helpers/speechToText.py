@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import textToSpeech as tts
 
 r = sr.Recognizer()
 
@@ -10,4 +11,4 @@ with sr.Microphone() as source:
         text = r.recognize_google(audio)
         print("You said: {}".format(text))
     except:
-        print("Sorry, could not recognize your voice")
+        tts.textToSpeech("Sorry, could not recognize your voice")
