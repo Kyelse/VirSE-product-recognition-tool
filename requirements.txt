@@ -1,3 +1,5 @@
 easyocr
 gtts
 playsound
+SpeechRecognition
+PyAudio
