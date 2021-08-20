@@ -4,7 +4,9 @@ import PIL.Image, PIL.ImageTk
 import time
 import datetime as dt
 import argparse
-
+import textToSpeech
+import ocr
+import speechToText
 class App:
     def __init__(self, window, window_title, video_source=0):
         self.window = window
@@ -39,8 +41,6 @@ class App:
     def snapshot(self):
         # Get a frame from the video source
         ret,frame=self.vid.get_frame()
-
-
         if ret:
             cv2.imwrite("readImage.jpg",cv2.cvtColor(frame,cv2.COLOR_RGB2BGR))
 
@@ -202,6 +202,10 @@ def main():
     # Create a window and pass it to the Application object
     App(tk.Tk(),'Read the Pỉcture')
     # call function on Image to Text Library (image: readImage.jpg)
-    # call function on Text to Speech Library 
+    output = subprocess.run(["python3", "ocr.py", "readImage.jpg"], capture_output=True)
+    # call function on Text to Speech Library
+    output = textToSpeech.process_text(output)
+    textToSpeech.textToSpeech(output)
+
 
 main()
