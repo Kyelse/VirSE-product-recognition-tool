@@ -4,9 +4,13 @@ import PIL.Image, PIL.ImageTk
 import time
 import datetime as dt
 import argparse
+import easyocr
+from helpers import textToSpeech as tts
+from helpers import speechToText as stt
 
 class App:
     def __init__(self, window, window_title, video_source=0):
+        self.reader = easyocr.Reader(["en", "vi"], gpu=False)
         self.window = window
         self.window.title(window_title)
         self.video_source = video_source
@@ -40,9 +44,11 @@ class App:
         # Get a frame from the video source
         ret,frame=self.vid.get_frame()
 
-
         if ret:
-            cv2.imwrite("readImage.jpg",cv2.cvtColor(frame,cv2.COLOR_RGB2BGR))
+            res = self.reader.readtext(frame, detail=0, paragraph=True)
+            text = (' '.join(res))
+            tts.textToSpeech(text)
+
 
     def open_camera(self):
         self.ok = True
