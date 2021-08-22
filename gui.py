@@ -27,7 +27,7 @@ class App:
         self.canvas.pack()
 
         # Button that lets the user take a snapshot
-        self.btn_snapshot=tk.Button(window, text="Read The Picture", command=self.snapshot)
+        self.btn_snapshot=tk.Button(window, text="Snapshot", command=self.snapshot)
         self.btn_snapshot.pack(side=tk.LEFT)
 
         # quit button
@@ -35,12 +35,12 @@ class App:
         self.btn_quit.pack(side=tk.LEFT)
 
         # After it is called once, the update method will be automatically called every delay milliseconds
-        self.delay=10
+        self.delay=5
         self.update()
 
         self.window.mainloop()
 
-    def snapshot(self):
+    def snapshot(self):        
         # Get a frame from the video source
         ret,frame=self.vid.get_frame()
 
@@ -206,7 +206,7 @@ class CommandLineParser:
 
 def main():
     # Create a window and pass it to the Application object
-    App(tk.Tk(),'Read the Pỉcture')
+    App(tk.Tk(),'VirSE | Product Recognition in Supermarkets')
     # call function on Image to Text Library (image: readImage.jpg)
     # call function on Text to Speech Library 
 
