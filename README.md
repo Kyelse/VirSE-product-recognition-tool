@@ -2,6 +2,7 @@
 ```
 Solution for hACCESS 2021
 ```
+<hr>
 * Image capture by static button or voice control using Tkinter and Cloud Speech-to-Text
 * Text detection in image by OCR reader
 * Convert text on products to spoken words by Cloud Text-to-Speech
