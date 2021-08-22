@@ -1,4 +1,4 @@
-# VirSE | Product Recognition in Supermarkets Application
+# VirSE | Product Recognition Tool in Supermarkets
 ```
 Solution for hACCESS 2021
 ```
