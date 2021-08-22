@@ -18,7 +18,7 @@ def textToSpeech(text):
     # Passing the text and language to the engine,
     # lang='en' to set language to English,
     # slow=False to converted text to a high speed audio
-    audioObj = gTTS(text=text, lang='en', slow=False)
+    audioObj = gTTS(text=text, lang='zh-CN', slow=False)
     
     # Save the converted audio in a mp3 file
     audioObj.save("output.mp3")
