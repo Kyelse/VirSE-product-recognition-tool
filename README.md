@@ -7,4 +7,4 @@ Solution for hACCESS 2021
 * Convert text on products to spoken words by Cloud Text-to-Speech
 * Make the shopping experience of people with dyslexia disorder as intuitive and fluid as possible
 
-![alt text](https://ibb.co/xqz4T5K)
+![alt text](docs/VirSE logo.png)
