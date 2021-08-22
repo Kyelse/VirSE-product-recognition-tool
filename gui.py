@@ -16,17 +16,17 @@ class App:
         self.video_source = video_source
         self.ok=False
 
-        #timer
+        #timer plcae holder
         self.timer=ElapsedTimeClock(self.window)
 
-        # open video source (by default this will try to open the computer webcam)
+        # open video source 
         self.vid = VideoCapture(self.video_source)
 
         # Create a canvas that can fit the above video source size
         self.canvas = tk.Canvas(window, width = self.vid.width, height = self.vid.height)
         self.canvas.pack()
 
-        # Button that lets the user take a snapshot
+        # snapshot button
         self.btn_snapshot=tk.Button(window, text="Snapshot", command=self.snapshot)
         self.btn_snapshot.pack(side=tk.LEFT)
 
@@ -205,9 +205,6 @@ class CommandLineParser:
 
 
 def main():
-    # Create a window and pass it to the Application object
     App(tk.Tk(),'VirSE | Product Recognition in Supermarkets')
-    # call function on Image to Text Library (image: readImage.jpg)
-    # call function on Text to Speech Library 
 
 main()
