@@ -5,7 +5,7 @@ def speechToText():
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
-        print("Do you want take photo (yes/no): ")
+        print("Do you want to capture the image?")
         audio = r.listen(source)
 
         try:
