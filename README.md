@@ -1,6 +1,6 @@
 # VirSE | Product Recognition Tool for People with Dyslexia
 ```
-Solution for hACCESS 2021
+Best Fit Hack Winner @hACCESS 2021
 ```
 * Image capture by static button or voice control using Tkinter and Cloud Speech-to-Text
 * Text detection in image by OCR reader
